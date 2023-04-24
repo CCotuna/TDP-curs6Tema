@@ -22,8 +22,6 @@ function setup(){
 }
 
 function draw(){
-    background('red');
-
     for(let box of boxes){
         box.display();
     }
@@ -42,5 +40,9 @@ class Box {
     display(){
         fill(this.color);
         square(this.x, this.y, this.size);
+        fill(0);
+        textSize(20);
+        textAlign(CENTER, CENTER);
+        text(this.number, this.x + this.size/2, this.y+this.size/2)
     }
 }
